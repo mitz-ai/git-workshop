@@ -41,9 +41,10 @@ The cherry-pick method
 ----------------------
 1. Get a list of the commits after the George Gamow story commit, these are the commits that we're going to want to cherry-pick
 2. Find the commit that is the parent of the George Gamow story commit.
-3. Make a new branch based on this starting commit, you can do that by checking out the commit and then checking out a new branch.
-4. cherry-pick each commit in your list in the order you want them to appear
-5. We're done! But that was a lot of work...
+3. Make a new branch based on this starting commit, you can do that by checking out the commit `git checkout <Parent_Commit_Hash>` and then checking out a new branch `git checkout -b <new_branch_name>`.
+4. cherry-pick each commit in your list in the order you want them to appear `git cherry-pick <Commit_Hash>`. Repeat this for each commit in the desired order.
+5. After you've fixed any conflict run `git add <file>` to tell git the change to make, then run `git cherry-pick --continue` to apply the revert commit.
+6. We're done! But that was a lot of work...
 
 The interactive rebase method
 -----------------------------
