@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+Hi i am bob
+=======
+I am alice
+>>>>>>> copi2
